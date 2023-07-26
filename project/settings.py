@@ -122,7 +122,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIR = [
-    os.path.join(BASE_DIR,"co-design/static")
+    os.path.join(BASE_DIR,"orders/co-design/build/static")
 ]
 
 # Default primary key field type
