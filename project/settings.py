@@ -59,9 +59,9 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
-        'APP_DIRS': True,
-        'OPTIONS': {
+        'DIRS': [], #템플릿 디렉토리 설정 비움
+        'APP_DIRS': False, # app 디렉토리를 템플릿으로 사용하지 않음
+        'OPTIONS': { 
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
@@ -121,8 +121,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIR = [
-    os.path.join(BASE_DIR,"orders/co-design/build/static")
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,"orders/co-design/build/static/")
 ]
 
 # Default primary key field type

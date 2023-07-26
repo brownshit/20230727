@@ -2,8 +2,12 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .models import Menu, Order
 from .serializers import MenuSerializer, OrderSerializer
+from django.shortcuts import render
 
 #git
+def index(request):
+    return render(reqeust, 'index.html')
+
 @api_view(['POST'])
 def submit_order(request):
     phone_number = request.data.get('phoneNumber')

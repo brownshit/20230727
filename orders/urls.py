@@ -17,7 +17,7 @@ urlpatterns = [
     #git
     path('api/orders/', views.submit_order, name='submit_order'),
     
-    # path('', views.index, name="index"),
+    path('', views.index, name="index"),
     #phone number create , list
     # path('create/', PhoneNumberCreateView.as_view(), name='phone_create'),
     # path('list/', PhoneNumberListView.as_view(), name='phone_list'),
