@@ -15,6 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+<<<<<<< Updated upstream:project/urls.py
 from django.urls import include, path
 from django.views.generic import TemplateView
 #gpt
@@ -28,3 +29,15 @@ urlpatterns = [
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+=======
+from django.urls import path, include
+from orders.views import ReactAppView
+
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api/orders/', include('orders.urls')),
+    path('', ReactAppView.as_view(), name='react_app'),  # ReactAppView를 불러오는 URL
+    
+]
+>>>>>>> Stashed changes:codesign_back/urls.py
